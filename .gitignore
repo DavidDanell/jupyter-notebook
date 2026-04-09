@@ -1,6 +1,5 @@
-data collections/special_iris.csv
-data collections/wine.csv
-data collections/special_iris.csv
-data collections/wine.csv
+data collections/
+
+
 __pycache__/
 .ipynb_checkpoints/
