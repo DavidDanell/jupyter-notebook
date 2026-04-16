@@ -1,0 +1,53 @@
+Decition tree:
+(classif)
+
+Nodes:
+root node är startpunkten/ första frågan 
+
+Leaf node, sista frågan, prediction görs här
+
+split när en nod delas med en fråga
+
+nodes är platser i trädet
+
+
+Attribut:
+
+* max_depth:
+    Maxdjup på trädet. Lägre värde minskar overfitting.
+    "hur många frågor trädet får ställa i en gren. T.ex grön j/n -> röd j/n 
+        här är max_depth 2. Trädet kan enklare hitta svårare mönster men riskar att övergöra det vilket leder till overfitting.
+
+
+* min_samples_split
+    hur många datapunkter som minst måste finnas i en nod för att få gå vidare. ex min_samples_split=10 : 
+    100 -> 30 j, 70 n, -> 9 n, 20 j, -> 9n stoppas, 20 j fortsätter en gång till.
+
+
+* min_samples_leaf
+    Gör att modellen inte får aoutomatiskt tilldela en grupp till en datapunkt förens det finns minst X antal i den gruppen innan. 
+    lägre -> bättre men risk för overfitting
+
+criterion (classif)
+    hur trädet väljer vilka splits som är bra, finns entropy eller gini, gini är standard och sällan första parametern man testar.
+
+    för regressors: criterion="squared_error" , criterion="absolute_error"
+
+Random forest:
+(classif) 
+
+
+n_estimators	Antal träd i skogen. Fler träd = stabilare men långsammare.
+
+
+max_depth	Maxdjup per träd. Lägre värde minskar overfitting.
+
+
+min_samples_leaf	Minsta antal rader i varje löv. Högre värde gör modellen stabilare.
+
+
+max_features	Hur många features varje split får testa. "sqrt" är vanligt för classification.
+
+
+n_jobs=-1 hur stor del av cpu som ska användas?
+
