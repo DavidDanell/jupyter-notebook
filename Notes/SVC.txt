@@ -1,0 +1,34 @@
+C styr hur mycket modellen bryr sig om felklassificering i träningsdatan.
+
+Litet C
+mer regularisering
+modellen tillåter fler misstag
+enklare, mjukare gräns
+mindre risk för overfitting
+Stort C
+mindre regularisering
+modellen försöker klassificera träningsdatan mer exakt
+mer komplex gräns
+större risk för overfitting
+
+Tänk:
+
+C = hur hårt modellen straffar träningsfel
+
+gamma
+
+Viktig främst för rbf.
+
+gamma styr hur långt varje datapunkts påverkan når.
+
+Låg gamma
+påverkan sträcker sig långt
+mjukare, enklare gräns
+Hög gamma
+påverkan är väldigt lokal
+modellen kan bli mycket krokig
+större risk för overfitting
+
+Tänk:
+
+gamma = hur lokalt modellen reagerar på en punkt
